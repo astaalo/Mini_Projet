@@ -1,0 +1,23 @@
+ [
+     
+    {
+        "login":"astaa",
+        "password":"asta123",
+        "role":"admin"
+    },
+    {
+        "login":"malick",
+        "password":"malick123",
+        "role":"admin"  
+    },
+    {
+        "login":"mira",
+        "password":"mira123",
+        "role":"joueur"
+    },
+    {
+        "login":"rock",
+        "password":"roky123",
+        "role":"joueur"  
+    }
+]
