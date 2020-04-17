@@ -20,13 +20,28 @@ if(isset($_POST['connexion'])){
 else{
     $msg="Champs obligatoire!";
 }
+}/*
+
+if(isset($_POST['connexin'])){
+    $login=$_POST['login'];
+    $password=$_POST['password'];
+    $result=connexion($login,$password);
+    if($result=="error"){
+        echo "login ou mot de pass incorrect";
+    }else{
+        header("Location:CreerCompteAdmin.php?lien=".$result);
+    }
 }
+*/
+
 ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
  <meta charset="utf-8">
  <link rel="StyleSheet" type="text/css" href="Connexion.css"/>
+ <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Mrs+Sheppards|Open+Sans&display=swap" rel="stylesheet">
  <title> AUTHENTIFICATION </title>
    </head>
      <body>
@@ -44,16 +59,18 @@ else{
                     <div class="champ">
                         <input type="text" placeholder="Login" name="login">
                         <div class="icone1"><img src="img/ic-login.png"></div><br><br> 
-                        <input type="text" placeholder="Password" name="password">
+                        <input type="password" placeholder="Password" name="password">
                         <div class="icone2"><img src="img/icone-password.png"></div><br><br>
                     </div>
-                    <button type="submit" name="connexion">Connexion</button>
-                        <a href="#"><h5>S'inscire pour jouer?</h5></a><br><br>
-                        <p style="color:red"><?= $msg ?></p>
+                    <div class="input-form">
+                <button type="submit" class="btn-form" name="connexion" id="">Connexion</button>
+                <a href="CreerCompteUser.php" class="link-form">S'inscrire pour jouer</a>
+            </div>
+            <p style="color:red"><? $msg?></p>
                 </form>
             </div>
             </div>
         </div>
     </body>
     </html>
-    
+
